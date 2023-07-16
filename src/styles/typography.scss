@@ -1,0 +1,47 @@
+// ******** Typography Styling ********
+@font-face {
+  font-family: "GraphikSemibold";
+  src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
+    url("../assets/fonts/GraphikSemibold.otf");
+}
+
+@font-face {
+  font-family: "GraphikMedium";
+  src:
+    local("GraphikMedium"),
+    url("../assets/fonts/GraphikMedium.otf") format("opentype") tech(color-COLRv1);
+}
+
+@font-face {
+  font-family: "GraphikRegular";
+  src:
+    local("GraphikRegular"),
+    url("../assets/fonts/GraphikRegular.otf") format("opentype") tech(color-COLRv1);
+}
+
+@font-face {
+  font-family: "GraphikThin";
+  src:
+    local("GraphikThin"),
+    url("../assets/fonts/GraphikThin.otf") format("opentype") tech(color-COLRv1);
+}
+
+body {
+  font-family: GraphikRegular, sans-serif;
+  letter-spacing: 0px;
+}
+
+h1{
+  font: normal normal medium 60px/78px Graphik;
+    letter-spacing: 0px;
+    color: $primary;
+    span{
+        font-family: "GraphikSemibold";
+    }
+}
+
+p {
+  color: $gray;
+  font: normal normal normal 15px/20px GraphikRegular,
+    sans-serif;
+}
