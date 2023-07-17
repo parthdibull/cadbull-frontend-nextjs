@@ -13,6 +13,22 @@ import drawing1 from "@/assets/images/drawing-image.png";
 import premium from "@/assets/icons/premium.png";
 import save from "@/assets/icons/save.png";
 import heart from "@/assets/icons/heart.png";
+import principle from "@/assets/images/principal.png";
+import indvidual from "@/assets/icons/induvidual.png";
+import visualization from "@/assets/icons/visualization.png";
+
+import category1 from "@/assets/icons/3dDrawing.png";
+import category2 from "@/assets/icons/architecture.png";
+import category3 from "@/assets/icons/landscape.png";
+import category4 from "@/assets/icons/cadmachinery.png";
+import category5 from "@/assets/icons/details.png";
+import category6 from "@/assets/icons/DwgBlocks.png";
+import category7 from "@/assets/icons/ElectricalCad.png";
+import category8 from "@/assets/icons/furniture.png";
+import category9 from "@/assets/icons/interio.png";
+import category10 from "@/assets/icons/project.png";
+import category11 from "@/assets/icons/Stucture.png";
+import category12 from "@/assets/icons/Urbandesign.png";
 
 
 const drawings = [
@@ -67,6 +83,21 @@ const projects = [
   }
 ]
 
+  const categories =[
+    { image: category1, title: "3d Drawing", count:"20,000+"},
+    { image: category2, title: "CAD Architecture", count:"25,256+"},
+    { image: category3, title: "CAD Landscape", count:"2,987+"},
+    { image: category4, title: "CAD Machinery", count:"56,258+"},
+    { image: category5, title: "Detail", count:"56,258+"},
+    { image: category6, title: "DWG Blocks", count:"48,654+"},
+    { image: category7, title: "Electrical CAD", count:"56,258+"},
+    { image: category8, title: "Furnitures", count:"56,258+"},
+    { image: category9, title: "Interior Design", count:"56,258+"},
+    { image: category10, title: "Projects", count:"56,258+"},
+    { image: category11, title: "Structure Detail", count:"56,258+"},
+    { image: category12, title: "Urban Design", count:"56,258+"},
+  ]
+
 
 export default function Home() {
   return (
@@ -99,18 +130,20 @@ export default function Home() {
                 </div>
               </form>
               {/* Drawing Type  */}
-              <div className='drawing-type-wrapper p-2 p-md-3 rounded row row-cols-5 gx-0'>
+              <div className='drawing-type-wrapper p-2 p-md-3 rounded row row-cols-5 row-cols-xl-6 justify-content-lg-evenly gx-0'>
                 {
                   drawings.map((drawing, index) => {
                     return (
                       <div className='col'>
-                        <div div key={index} className='d-flex align-items-center gap-md-2' >
-                          <img src={drawing.img.src} alt="icon" className='img-fluid d-none d-md-block' />
-                          <div>
-                            <h6 className='mb-1'>{drawing.type}</h6>
-                            <p>{drawing.description}</p>
+                        <Link href={""}>
+                          <div key={index} className='d-flex align-items-center gap-md-2' >
+                            <img src={drawing.img.src} alt="icon" className='img-fluid d-none d-md-block' />
+                            <div>
+                              <h6 className='mb-1'>{drawing.type}</h6>
+                              <p>{drawing.description}</p>
+                            </div>
                           </div>
-                        </div>
+                        </Link>
                       </div>
                     )
                   })
@@ -248,6 +281,90 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Main PRINCIPLES  */}
+      <section className='py-md-5 py-3'>
+        <div className="container">
+          <div className="row gx-lg-5">
+            <div className="col-lg-6">
+              <div className='main-principle-image-wrapper'>
+                <img src={principle.src} className='img-fluid' alt="principle" />
+              </div>
+            </div>
+            <div className="col-lg-6">
+              <div className="main-principle-content-wrapper">
+                <div className='mb-md-4 mb-3'>
+                  <SectionHeading subHeading={"MAIN PRINCIPLES"} mainHeading={"Crafting Imagination to"} mainHeadingBold={"Impression."} alignment="" />
+                </div>
+                <div className='mb-4'>
+                  <p className='mb-2'>Cadbull is an exclusive forum that connects the creative community of innovative Auto cad designers, firms and organizations. The forum connects people with innovative designs and makes them share their creativity and visualization across the globe.
+                  </p>
+                  <p>Cadbull is an advanced professional platform to interact and excel with, offering a wide range of high quality auto cad utility areas like architecture, interior and product designing, 3D drawing, building plan, blocks, electrical, furniture, landscaping, machinery, structural details, 3D images, symbols and urban designs. Catering to more than 100 such categories to begin with, Cadbull is just starting out!</p>
+                </div>
+                <div className="row row-cols-2">
+                  {/* 1  */}
+                  <div className="col">
+                    <div>
+                      <div className='mb-3'>
+                        <img src={visualization.src} alt="icon" className='img-fluid' />
+                      </div>
+                      <div>
+                        <h6 className='fw-bold text-primary text-capitalize'>Cad Visualization</h6>
+                        <p className='mb-2'>Cad plan of each detail of your future interior.</p>
+                        <button className='btn transparent-btn'>READ MORE</button>
+                      </div>
+                    </div>
+                  </div>
+                  {/* 1  */}
+                  <div className="col">
+                    <div>
+                      <div className='mb-3'>
+                        <img src={indvidual.src} alt="icon" className='img-fluid' />
+                      </div>
+                      <div>
+                        <h6 className='fw-bold text-primary text-capitalize'>Individual Project</h6>
+                        <p className='mb-2'>The basic philosophy of studio is to create individual design.</p>
+                        <button className='btn transparent-btn'>READ MORE</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Categories */}
+      <section className='py-md-5 py-4'>
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12 mb-3">
+              <div className='mb-md-5 mb-4 d-flex'>
+                <SectionHeading subHeading={"find Latest"} mainHeading={"Categories"} mainHeadingBold={"Cadbull"} alignment="mx-auto" />
+              </div>
+            </div>
+          </div> 
+          <div className="row g-4 justify-content-center">
+            {
+              categories.map((category,index) =>{
+                return(
+                  <div className="col-lg-3 col-md-4 col-sm-6 col-10" key={index}>
+                    <div className='d-flex align-items-center gap-2 category-wrapper' >
+                      <img src={category.image.src} alt="icon" className='img-fluid' />
+                      <div>
+                        <h6 className='mb-1'>{category.title}</h6>
+                        <p>{category.count}</p>
+                      </div>
+                    </div>
+                  </div>
+                )
+              })
+            }
+          </div>
+        </div>
+      </section>
+
     </Fragment>
   )
 }

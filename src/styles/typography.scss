@@ -107,7 +107,7 @@ footer {
 
 
 h6 {
-  font: normal normal normal 15px/20px GraphikRegular, sans-serif;
+  font: normal normal normal 14px/20px GraphikRegular, sans-serif;
   color: $gray;
   text-transform: uppercase;
 
@@ -118,7 +118,7 @@ h6 {
 }
 
 h3 {
-  font: normal normal 300 36px/52px GraphikRegular, sans-serif;
+  font: normal normal 300 36px/42px GraphikRegular, sans-serif;
   color: $primary;
 
   span {
@@ -126,7 +126,7 @@ h3 {
   }
 
   @media all and (max-width:768px) {
-    font: normal normal 300 20px/30px GraphikRegular,
+    font: normal normal 300 24px/30px GraphikRegular,
       sans-serif;
   }
 }

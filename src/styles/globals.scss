@@ -32,8 +32,12 @@
   color: $black !important;
 }
 
+.text-primary {
+  color: $primary !important;
+}
+
 .bg-primary {
-  background: $primary;
+  background: $primary !important;
 }
 
 .bg-secondary {
@@ -50,11 +54,30 @@
 
 .heading-image-wrapper {
   position: relative;
-  top: 26px;
   margin-right: -15px;
-  @media all and (max-width:768px){
-    top: 20px;
 
+  @media all and (max-width:768px) {
+    top: 15px;
+  }
+
+  @media all and (max-width:575px) {
+    position: relative;
+    margin-right: -15px;
+    top: 20px;
+  }
+}
+
+.main-heading-wrapper {
+  @media all and (min-width:991px) {
+    &::before {
+      position: absolute;
+      content: '';
+      background-image: url('../assets/images/heading-image.png');
+      width: 68px;
+      height: 60px;
+      left: -45px;
+      top: 15px;
+    }
   }
 }
 
@@ -72,7 +95,8 @@
     span {
       font-family: GraphikRegular, sans-serif;
     }
-    @media all and (max-width:767px){
+
+    @media all and (max-width:767px) {
       font: normal normal 600 10px/13px GraphikThin,
         sans-serif;
     }
@@ -95,7 +119,7 @@
       font: normal normal 600 15px/15px GraphikSemibold, sans-serif !important;
       color: $black;
 
-      @media all and (max-width:767px){
+      @media all and (max-width:767px) {
         font: normal normal 600 10px/11px GraphikSemibold,
           sans-serif !important;
       }
@@ -103,6 +127,7 @@
 
     p {
       font: normal normal 500 12px/15px GraphikRegular, sans-serif;
+
       @media all and (max-width:767px) {
         font: normal normal 500 7px/11px Graphik;
       }
@@ -206,5 +231,17 @@
       background: $borderColor;
     }
 
+  }
+}
+
+
+.category-wrapper {
+  h6 {
+    font: normal normal 600 16px/1 GraphikMedium, sans-serif;
+    color: $black;
+
+    @media all and (max-width:767px) {
+      font: normal normal 600 14px/1 GraphikMedium, sans-serif;
+    }
   }
 }
