@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="row d-lg-block d-none">
             <div className="col-md-12">
               <div className="logo-wrapper text-center">
-                <img src={logo.src} alt="logo" className="img-fluid" />
+                <img src={logo.src} alt="logo" className="img-fluid logo" />
               </div>
             </div>
           </div>
@@ -41,7 +41,7 @@ const Footer = () => {
             </div>
             <div className="col-md-6 col-lg-5 col-xl-4">
               <div className="text-start text-md-center">
-                <img src={logo.src} alt="logo" className="img-fluid mb-3 d-block d-lg-none mx-md-auto" />
+                <img src={logo.src} alt="logo" className="img-fluid mb-3 d-block d-lg-none mx-md-auto logo" />
                 <h4 className="text-white mb-md-4 d-none d-lg-block opacity-0">info</h4>
                 <p className="text-white mb-3 mb-md-4">Cadbull is an exclusive forum that connects the creative community of innovative Auto cad designers, firms and organizations.</p>
                 <ul className="list-unstyled d-flex gap-2 justify-content-md-center">

@@ -1,12 +1,31 @@
 .btn {
   border-radius: $borderRadiusSm;
-  padding: 10px 20px;
+  padding: 9px 18px;
   font: normal normal normal 15px/20px GraphikRegular, sans-serif;
   text-transform: uppercase;
 }
 
-.btn-primary {
+
+.btn-secondary {
   background-color: $secondary;
   border-color: $secondary ;
   color: $white;
+}
+
+.btn-primary {
+  background-color: $primary;
+  border-color: $primary ;
+  color: $white;
+  border-radius: 0;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    right: -12px;
+    bottom: -12px;
+    width: 117px;
+    height: 40px;
+    background-image: url("../assets/images/buton-lines.png");
+  }
 }

@@ -27,14 +27,24 @@
 }
 
 body {
-  font-family: GraphikRegular, sans-serif;
   letter-spacing: 0px;
+  font: normal normal normal 15px/20pxGraphikRegular, sans-serif;
+  color: $gray;
 }
 
 h1,
+h2,
+h3,
 h4,
+h5,
+h6,
 p {
   margin: 0;
+}
+
+
+a {
+  text-decoration: none;
 }
 
 h1 {
@@ -85,8 +95,20 @@ footer {
 }
 
 
-.text-danger {
-  color: $danger;
+
+h6 {
+  font: normal normal normal 15px/20px GraphikRegular, sans-serif;
+  color: $gray;
+  text-transform: uppercase;
+}
+
+h3 {
+  font: normal normal 300 40px/52px GraphikRegular, sans-serif;
+  color: $primary;
+
+  span {
+    font-family: GraphikSemibold, sans-serif;
+  }
 }
 
 .footer-lower-wrapper {

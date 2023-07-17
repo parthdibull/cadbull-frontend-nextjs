@@ -17,3 +17,59 @@
 //     max-width: 1280px;
 //   }
 // }
+
+// ******** Utility Classes ********
+
+.text-danger {
+  color: $danger;
+}
+
+.text-grey {
+  color: $gray;
+}
+
+
+// ******** Home Page ********
+
+.hero {
+  p {
+    font: normal normal 600 30px/39px GraphikThin, sans-serif;
+
+    span {
+      font-family: GraphikRegular, sans-serif;
+    }
+  }
+
+  form {
+    max-width: 600px;
+  }
+
+  .drawing-type-wrapper {
+    background: $bgdark;
+    max-width: 1000px;
+    margin: auto;
+
+    img {
+      mix-blend-mode: darken;
+    }
+
+    h6 {
+      font: normal normal 600 15px/15px GraphikSemibold, sans-serif !important;
+      color: $black;
+    }
+
+    p {
+      font: normal normal normal 12px/15px GraphikRegular, sans-serif;
+    }
+  }
+}
+
+.heading-image-wrapper {
+  position: absolute;
+  left: -30px;
+  top: 18px;
+}
+
+.logo {
+  max-width: 170px;
+}
