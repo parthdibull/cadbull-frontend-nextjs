@@ -21,17 +21,47 @@
 // ******** Utility Classes ********
 
 .text-danger {
-  color: $danger;
+  color: $danger !important;
 }
 
 .text-grey {
   color: $gray;
 }
 
+.text-black {
+  color: $black !important;
+}
 
-// ******** Home Page ********
+.bg-primary {
+  background: $primary;
+}
+
+.bg-secondary {
+  background: $secondary !important;
+}
+
+.badge {
+  padding: 4px 6px !important;
+  border-radius: $borderRadiusSm !important;
+}
+
+
+// ******** Section Heading ********
+
+.heading-image-wrapper {
+  position: absolute;
+  left: -30px;
+  top: 20px;
+}
+
+.logo {
+  max-width: 170px;
+}
+
+// ******** Hero Section ********
 
 .hero {
+
   p {
     font: normal normal 600 30px/39px GraphikThin, sans-serif;
 
@@ -59,17 +89,97 @@
     }
 
     p {
-      font: normal normal normal 12px/15px GraphikRegular, sans-serif;
+      font: normal normal 500 12px/15px GraphikRegular, sans-serif
     }
   }
 }
 
-.heading-image-wrapper {
-  position: absolute;
-  left: -30px;
-  top: 18px;
-}
 
-.logo {
-  max-width: 170px;
+
+// ******** Project of the day ********
+
+.project-day-card {
+  background: $white 0% 0% no-repeat padding-box;
+  border: 1px solid $borderLightColor;
+  border-radius: $borderRadiusLg;
+  padding: 14px;
+  cursor: pointer;
+
+  &:hover {
+    .project-day-card-image {
+      &:before {
+        width: 100%;
+        height: 100%;
+        transition: all 0.3 ease-in-out;
+
+      }
+    }
+
+    .project-day-card-link {
+      position: relative;
+
+      p {
+        color: $secondary;
+      }
+    }
+  }
+
+  .project-day-card-image {
+    height: 250px;
+    width: 100%;
+    position: relative;
+    border-radius: $borderRadiusLg;
+    overflow: hidden;
+
+    &:before {
+      position: absolute;
+      content: '';
+      inset: 0;
+      width: 0%;
+      height: 0%;
+      background-color: $overRealy;
+      transition: all 0.3s ease-in-out;
+    }
+
+    img {
+      border: 1px solid $borderLightColor;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .project-day-card-description {
+    border-left: 4px solid $gray;
+
+    span {
+      font: normal normal 500 12px/1 GraphikRegular, sans-serif;
+    }
+
+    p {
+      max-width: 28ch;
+    }
+  }
+
+  .project-day-card-link {
+    position: relative;
+
+    p {
+      color: $black;
+      font: normal normal 600 15px/20px GraphikRegular, sans-serif;
+      background-color: $white;
+      position: relative;
+      display: inline-block;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 1px;
+      inset: 0;
+      margin: auto;
+      background: $borderColor;
+    }
+
+  }
 }
