@@ -31,17 +31,70 @@ body {
   letter-spacing: 0px;
 }
 
-h1{
-  font: normal normal medium 60px/78px Graphik;
-    letter-spacing: 0px;
-    color: $primary;
-    span{
-        font-family: "GraphikSemibold";
-    }
+h1,
+h4,
+p {
+  margin: 0;
+}
+
+h1 {
+  font: normal normal medium 60px/78px GraphikRegular, sans-serif;
+  color: $primary;
+
+  span {
+    font-family: "GraphikSemibold";
+  }
+}
+
+h4 {
+  font: normal normal normal 30px/30px GraphikRegular, sans-serif;
+
+  @media all and (max-width:575px) {
+    font: normal normal normal 25px/30px GraphikRegular, sans-serif;
+  }
 }
 
 p {
   color: $gray;
-  font: normal normal normal 15px/20px GraphikRegular,
-    sans-serif;
+  font: normal normal normal 14px/24px GraphikRegular, sans-serif;
+
+  @media all and (max-width:575px) {
+    font: normal normal normal 12px/24px GraphikRegular, sans-serif;
+  }
+}
+
+
+
+footer {
+  a {
+    font: normal normal normal 14px/1 GraphikRegular, sans-serif;
+    text-decoration: none;
+    color: $white;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    @media all and (max-width:575px) {
+      font: normal normal normal 12px/35px GraphikRegular, sans-serif;
+    }
+  }
+}
+
+
+.text-danger {
+  color: $danger;
+}
+
+.footer-lower-wrapper {
+
+  a,
+  li {
+    @media all and (max-width:575px) {
+      font: normal normal normal 10px/20px GraphikRegular, sans-serif;
+    }
+  }
 }
