@@ -1,6 +1,11 @@
 import logo from "@/assets/images/logo-footer.png";
-import icon from "@/assets/icons/icon.png";
+import map from "@/assets/icons/map.png";
+import phone from "@/assets/icons/phone.png";
+import email from "@/assets/icons/email.png";
 import arrow from "@/assets/icons/arrow.png";
+import fb from "@/assets/icons/fb.png";
+import twitter from "@/assets/icons/twitter.png";
+import youtube from "@/assets/icons/youtube.png";
 import Link from "next/link";
 const Footer = () => {
   return (
@@ -22,17 +27,17 @@ const Footer = () => {
                 <ul className="list-unstyled d-flex gap-2 gap-md-4 flex-column">
                   <li>
                     <div className="d-flex align-items-start gap-2">
-                      <img src={icon.src} alt="" />
+                      <img src={map.src} alt="" />
                       <p className="text-white">403, Fortune Business Hub, Beside science city, Science City Road Sola, Ahmedabad, Gujarat 380060</p>
                     </div>
                   </li>
                   <li className="d-flex align-items-start gap-2 flex-column flex-xl-row">
                     <div className="d-flex align-items-center gap-2">
-                      <img src={icon.src} alt="" />
+                      <img src={phone.src} alt="" />
                       <p className="text-white">+91 989 874 8697</p>
                     </div>
                     <div className="d-flex align-items-center gap-2">
-                      <img src={icon.src} alt="" />
+                      <img src={email.src} alt="" />
                       <p className="text-white">support@cadbull.com</p>
                     </div>
                   </li>
@@ -46,13 +51,13 @@ const Footer = () => {
                 <p className="text-white mb-3 mb-md-4">Cadbull is an exclusive forum that connects the creative community of innovative Auto cad designers, firms and organizations.</p>
                 <ul className="list-unstyled d-flex gap-2 justify-content-md-center">
                   <li>
-                    <a href=""> <img src={icon.src} alt="" /></a>
+                    <a href=""> <img src={fb.src} alt="" /></a>
                   </li>
                   <li>
-                    <a href=""> <img src={icon.src} alt="" /></a>
+                    <a href=""> <img src={twitter.src} alt="" /></a>
                   </li>
                   <li>
-                    <a href=""> <img src={icon.src} alt="" /></a>
+                    <a href=""> <img src={youtube.src} alt="" /></a>
                   </li>
                 </ul>
               </div>
@@ -114,7 +119,7 @@ const Footer = () => {
             <p className="text-white">&copy; 2022 <span className="text-danger">CADBULL</span> | All Rights Reserved.</p>
             <ul className="list-unstyled d-flex align-items-center gap-3 gap-md-4 mb-0 justify-content-center ">
               <li>
-                <Link href="">Term & Conditionss</Link>
+                <Link href="">Term & Conditions</Link>
               </li>
               <li className="text-white">|</li>
               <li>

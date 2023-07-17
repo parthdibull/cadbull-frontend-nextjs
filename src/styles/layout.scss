@@ -42,3 +42,28 @@ footer {
 .border-top-footer {
   border-top: 0.5px solid $borderDarkColor;
 }
+
+
+.pagination {
+  justify-content: center;
+  box-shadow: $shadow;
+  border-radius: $borderRadiusSm 0px 0px $borderRadiusSm;
+
+  .active {
+    background: #EBEBEB 0% 0% no-repeat padding-box;
+  }
+
+  .page-item .page-link {
+    box-shadow: $shadow;
+    border: 0 !important;
+    font: normal normal normal 15px/20px GraphikRegular,
+      sans-serif;
+    color: $black;
+  }
+
+  .page-item:first-child .page-link,
+  .page-item:last-child .page-link {
+    background-color: $primary;
+    border-color: $primary;
+  }
+}

@@ -49,9 +49,13 @@
 // ******** Section Heading ********
 
 .heading-image-wrapper {
-  position: absolute;
-  left: -30px;
-  top: 20px;
+  position: relative;
+  top: 26px;
+  margin-right: -15px;
+  @media all and (max-width:768px){
+    top: 20px;
+
+  }
 }
 
 .logo {
@@ -67,6 +71,10 @@
 
     span {
       font-family: GraphikRegular, sans-serif;
+    }
+    @media all and (max-width:767px){
+      font: normal normal 600 10px/13px GraphikThin,
+        sans-serif;
     }
   }
 
@@ -86,10 +94,18 @@
     h6 {
       font: normal normal 600 15px/15px GraphikSemibold, sans-serif !important;
       color: $black;
+
+      @media all and (max-width:767px){
+        font: normal normal 600 10px/11px GraphikSemibold,
+          sans-serif !important;
+      }
     }
 
     p {
-      font: normal normal 500 12px/15px GraphikRegular, sans-serif
+      font: normal normal 500 12px/15px GraphikRegular, sans-serif;
+      @media all and (max-width:767px) {
+        font: normal normal 500 7px/11px Graphik;
+      }
     }
   }
 }
@@ -105,13 +121,22 @@
   padding: 14px;
   cursor: pointer;
 
+  .action-buttons-wrapper {
+    visibility: hidden;
+    transition: all 0.5 ease-in-out;
+  }
+
   &:hover {
+    .action-buttons-wrapper {
+      visibility: visible;
+      transition: all 0.5 ease-in-out;
+    }
+
     .project-day-card-image {
       &:before {
         width: 100%;
         height: 100%;
         transition: all 0.3 ease-in-out;
-
       }
     }
 

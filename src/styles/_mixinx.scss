@@ -1,8 +1,14 @@
 .btn {
   border-radius: $borderRadius;
   padding: 9px 18px;
-  font: normal normal normal 15px/20px GraphikRegular, sans-serif;
+  font: normal normal 500 15px/20px GraphikRegular, sans-serif;
   text-transform: uppercase;
+
+  @media all and (max-width: 768px){
+    padding: 7px 14px;
+    font: normal normal 500 8px/11px GraphikRegular,
+      sans-serif;
+  }
 }
 
 
@@ -10,6 +16,9 @@
   background-color: $secondary;
   border-color: $secondary ;
   color: $white;
+  &:hover{
+    background-color: $primary;
+  }
 }
 
 .btn-primary {
@@ -26,6 +35,14 @@
     bottom: -12px;
     width: 117px;
     height: 40px;
-    background-image: url("../assets/images/buton-lines.png");
+    background-image: url("../assets/images/button-lines.png");
+  }
+
+  &:hover {
+    background-color: $secondary;
+    &::before {
+      background-image: none;
+    }
   }
 }
+

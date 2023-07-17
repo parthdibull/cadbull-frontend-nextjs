@@ -55,7 +55,7 @@ const Header = () => {
                   })
                 }
               </ul>
-              <Link href={''} className="btn btn-secondary">LOGIN</Link>
+              <Link href={''} className="btn btn-secondary d-inline-flex gap-1 align-items-center"><Icons.User /> <span>User</span></Link>
             </div>
           </div>
         </nav>

@@ -28,8 +28,13 @@
 
 body {
   letter-spacing: 0px;
-  font: normal normal normal 15px/20pxGraphikRegular, sans-serif;
+  font: normal normal 500 15px/20px GraphikRegular, sans-serif;
   color: $gray;
+
+  @media all and (max-width:767px) {
+    font: normal normal 500 10px/13px GraphikRegular,
+      sans-serif;
+  }
 }
 
 h1,
@@ -54,13 +59,18 @@ h1 {
   span {
     font-family: "GraphikSemibold";
   }
+
+  @media all and (max-width:768px){
+    font: normal normal normal 20px/26px GraphikRegular,
+      sans-serif;
+  }
 }
 
 h4 {
-  font: normal normal normal 30px/30px GraphikRegular, sans-serif;
+  font: normal normal normal 28px/30px GraphikRegular, sans-serif;
 
-  @media all and (max-width:575px) {
-    font: normal normal normal 25px/30px GraphikRegular, sans-serif;
+  @media all and (max-width:768px) {
+    font: normal normal normal 22px/30px GraphikRegular, sans-serif;
   }
 }
 
@@ -68,7 +78,7 @@ p {
   color: $gray;
   font: normal normal normal 14px/24px GraphikRegular, sans-serif;
 
-  @media all and (max-width:575px) {
+  @media all and (max-width:768px) {
     font: normal normal normal 12px/24px GraphikRegular, sans-serif;
   }
 }
@@ -88,7 +98,7 @@ footer {
       text-decoration: underline;
     }
 
-    @media all and (max-width:575px) {
+    @media all and (max-width:768px) {
       font: normal normal normal 12px/35px GraphikRegular, sans-serif;
     }
   }
@@ -100,14 +110,24 @@ h6 {
   font: normal normal normal 15px/20px GraphikRegular, sans-serif;
   color: $gray;
   text-transform: uppercase;
+
+  @media all and (max-width:768px) {
+    font: normal normal normal 13px/20px GraphikRegular,
+      sans-serif;
+  }
 }
 
 h3 {
-  font: normal normal 300 40px/52px GraphikRegular, sans-serif;
+  font: normal normal 300 36px/52px GraphikRegular, sans-serif;
   color: $primary;
 
   span {
     font-family: GraphikSemibold, sans-serif;
+  }
+
+  @media all and (max-width:768px) {
+    font: normal normal 300 20px/30px GraphikRegular,
+      sans-serif;
   }
 }
 
@@ -115,8 +135,15 @@ h3 {
 
   a,
   li {
-    @media all and (max-width:575px) {
+    @media all and (max-width:768px) {
       font: normal normal normal 10px/20px GraphikRegular, sans-serif;
     }
   }
+}
+
+::placeholder{
+    @media all and (max-width:767px) {
+        font: normal normal 500 10px/13px GraphikRegular,
+          sans-serif;
+      }
 }
