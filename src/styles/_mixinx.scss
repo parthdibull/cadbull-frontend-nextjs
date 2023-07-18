@@ -10,6 +10,10 @@
   }
 }
 
+.btn-lg {
+  padding: 12px 24px;
+}
+
 
 
 .btn-secondary {
@@ -63,7 +67,7 @@
 
 .btn-light {
   @include variable-button($white, $white, $primary);
-  @include variable-button-hover($primary, $white, url("../assets/images/button-lines.png"));
+  @include variable-button-hover($secondary, $white, url("../assets/images/button-lines.png"));
 }
 
 .btn-light-rounded {

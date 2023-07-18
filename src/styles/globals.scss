@@ -283,3 +283,16 @@
     }
   }
 }
+
+
+// ******** Get Off ********
+.get-off-wrapper {
+  background-color: $white;
+  border: 0.5px solid $borderLightColor;
+  overflow: hidden;
+
+  .get-off-text {
+    background-color: $secondary !important;
+    clip-path: polygon(0 0, 73% 0, 100% 100%, 0% 100%);
+  }
+}

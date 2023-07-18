@@ -32,7 +32,8 @@ import category12 from "@/assets/icons/Urbandesign.png";
 import ourSkills from "@/assets/images/our-skills.png";
 import bussiness from "@/assets/images/Interior-Designer.png";
 import housePlan from "@/assets/images/HOUSE-PLAN.png";
-import blog from "@/assets/images/blog-1.png"
+import blog from "@/assets/images/blog-1.png";
+import secure from "@/assets/icons/secure.png";
 
 
 const drawings = [
@@ -229,7 +230,7 @@ export default function Home() {
                   <div className="col-lg-4 col-sm-6" key={project.id}>
                     <div className='project-day-card h-100'>
                       <div className='project-day-card-image mb-3 position-relative'>
-                        <img src={project.image.src} alt="" className='w-100 img-fluid' />
+                        <img src={project.image.src} alt="project" className='w-100 img-fluid' />
                         <div className='action-buttons-wrapper position-absolute bottom-0 end-0 d-inline-flex flex-column gap-1 pe-2 pb-2'>
                           <button className='border-0 bg-transparent p-0 shadow-none d-in'><img src={heart.src} className='border-0' alt="icon" /></button>
                           <button className='border-0 bg-transparent p-0 shadow-none'><img src={save.src} className='border-0' alt='icon' /></button>
@@ -528,7 +529,7 @@ export default function Home() {
                   <div className="col-lg-4 col-sm-6" key={blog.id}>
                     <div className='project-day-card h-100'>
                       <div className='project-day-card-image mb-3 position-relative'>
-                        <img src={blog.image.src} alt="" className='w-100 img-fluid' />
+                        <img src={blog.image.src} alt="blog" className='w-100 img-fluid' />
                       </div>
 
                       <div className='project-day-card-title d-flex justify-content-between'>
@@ -554,6 +555,36 @@ export default function Home() {
         </div>
       </section>
 
+
+      {/* Get Off */}
+      <section className='py-4 py-md-5'>
+        <div className="container">
+          <div className="row get-off-wrapper rounded-xl align-items-center">
+            <div className="col-lg-7 ps-0">
+              <div className='get-off-text d-flex gap-md-5 align-items-center p-4 ps-md-5'>
+                <div>
+                  <h2 className='text-white fw-bolder'>Get 20% Off</h2>
+                  <h5 className='text-white'>ON ANNUAL PLAN</h5>
+                </div>
+                <button className='btn btn-light'>BUY NOW</button>
+              </div>
+            </div>
+            <div className="col-lg-5">
+              <div className='p-4'>
+                <form className='mx-auto mb-2'>
+                  <div className="input-group input-group-lg">
+                    <input type="text" className="form-control  border-end-0 rounded-end-0" placeholder="Get latest update, Share your email" aria-label="Get latest update, Share your email" />
+                    <span className="input-group-text p-0" id="inputGroup-sizing-lg">
+                      <button type='submit' className='btn btn-lg btn-secondary rounded-start-0'>SUBSCRIBE</button>
+                    </span>
+                  </div>
+                </form>
+                <p className='d-flex gap-1 align-items-center text-black'> <img src={secure.src} className='img-fluid' alt="icon" /> <span>100% Secure. Zero Spam</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
     </Fragment >
   )
