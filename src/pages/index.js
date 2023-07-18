@@ -29,6 +29,9 @@ import category9 from "@/assets/icons/interio.png";
 import category10 from "@/assets/icons/project.png";
 import category11 from "@/assets/icons/Stucture.png";
 import category12 from "@/assets/icons/Urbandesign.png";
+import ourSkills from "@/assets/images/our-skills.png";
+import bussiness from "@/assets/images/Interior-Designer.png";
+import housePlan from "@/assets/images/HOUSE-PLAN.png";
 
 
 const drawings = [
@@ -83,20 +86,20 @@ const projects = [
   }
 ]
 
-  const categories =[
-    { image: category1, title: "3d Drawing", count:"20,000+"},
-    { image: category2, title: "CAD Architecture", count:"25,256+"},
-    { image: category3, title: "CAD Landscape", count:"2,987+"},
-    { image: category4, title: "CAD Machinery", count:"56,258+"},
-    { image: category5, title: "Detail", count:"56,258+"},
-    { image: category6, title: "DWG Blocks", count:"48,654+"},
-    { image: category7, title: "Electrical CAD", count:"56,258+"},
-    { image: category8, title: "Furnitures", count:"56,258+"},
-    { image: category9, title: "Interior Design", count:"56,258+"},
-    { image: category10, title: "Projects", count:"56,258+"},
-    { image: category11, title: "Structure Detail", count:"56,258+"},
-    { image: category12, title: "Urban Design", count:"56,258+"},
-  ]
+const categories = [
+  { image: category1, title: "3d Drawing", count: "20,000+" },
+  { image: category2, title: "CAD Architecture", count: "25,256+" },
+  { image: category3, title: "CAD Landscape", count: "2,987+" },
+  { image: category4, title: "CAD Machinery", count: "56,258+" },
+  { image: category5, title: "Detail", count: "56,258+" },
+  { image: category6, title: "DWG Blocks", count: "48,654+" },
+  { image: category7, title: "Electrical CAD", count: "56,258+" },
+  { image: category8, title: "Furnitures", count: "56,258+" },
+  { image: category9, title: "Interior Design", count: "56,258+" },
+  { image: category10, title: "Projects", count: "56,258+" },
+  { image: category11, title: "Structure Detail", count: "56,258+" },
+  { image: category12, title: "Urban Design", count: "56,258+" },
+]
 
 
 export default function Home() {
@@ -344,11 +347,11 @@ export default function Home() {
                 <SectionHeading subHeading={"find Latest"} mainHeading={"Categories"} mainHeadingBold={"Cadbull"} alignment="mx-auto" />
               </div>
             </div>
-          </div> 
+          </div>
           <div className="row g-4 justify-content-center">
             {
-              categories.map((category,index) =>{
-                return(
+              categories.map((category, index) => {
+                return (
                   <div className="col-lg-3 col-md-4 col-sm-6 col-10" key={index}>
                     <div className='d-flex align-items-center gap-2 category-wrapper' >
                       <img src={category.image.src} alt="icon" className='img-fluid' />
@@ -365,7 +368,122 @@ export default function Home() {
         </div>
       </section>
 
-    </Fragment>
+      {/* CTA  */}
+      <section className='py-4 py-md-5'>
+        <div className="container">
+          <div className="row rounded-xl bg-primary p-4 p-md-5">
+            <div className="col-md-12">
+              <div className='text-center'>
+                <h3 className='text-white mb-2 mb-md-3'>Get Incredible CAD Plan Design Right Now!</h3>
+                <p className='mb-4 mb-md-5 text-white'>At every stage, we could supervise your project – controlling all the details and consulting the builders.</p>
+                <button className='btn btn-light'>GET IN TOUCH</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* Our Skills */}
+      <section className='py-md-5 py-4'>
+        <div className="container">
+          <div className="row justify-content-between align-items-center">
+            <div className="col-md-5 mb-3">
+              <div>
+                <div className='mb-md-4 mb-3 d-flex'>
+                  <SectionHeading subHeading={"OUR SKILLS"} mainHeading={"The Core Company Values"} mainHeadingBold={"Cadbull"} alignment="" />
+                </div>
+                <p className='mb-3 mb-md-4'>One complete exquisite place to shape-up imagination, crafting to express so that you can impress the rest with the best. Get started, create your account and get the maximumof the community. Share expertise and connect with your peers on Cadbull Auto desk idea station.</p>
+              </div>
+
+              <div className='d-flex flex-column gap-4'>
+                {/* CAD Planing Design */}
+                <div>
+                  <div className='d-flex justify-content-between align-items-center mb-2'>
+                    <h5 className='text-gray'>CAD Planing Design</h5>
+                    <h5 className='text-gray'>98%</h5>
+                  </div>
+                  <div className="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                    <div className="progress-bar" style={{ width: "98%" }} ></div>
+                  </div>
+                </div>
+                {/* 3d Modeling Design */}
+                <div>
+                  <div className='d-flex justify-content-between align-items-center mb-2'>
+                    <h5 className='text-gray'>3d Modeling Design</h5>
+                    <h5 className='text-gray'>95%</h5>
+                  </div>
+                  <div className="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                    <div className="progress-bar" style={{ width: "95%" }} ></div>
+                  </div>
+                </div>
+                {/* 2d Planning Design */}
+                <div>
+                  <div className='d-flex justify-content-between align-items-center mb-2'>
+                    <h5 className='text-gray'>2d Planning Design</h5>
+                    <h5 className='text-gray'>90%</h5>
+                  </div>
+                  <div className="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                    <div className="progress-bar" style={{ width: "90%" }} ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-6 mb-3">
+              <div className="our-skills-image-wrapper">
+                <img src={ourSkills.src} alt="skills" className='img-fluid' />
+              </div>
+            </div>
+          </div>
+        </div >
+      </section >
+
+
+      {/* Showcase Your Business */}
+      <section className='py-4 py-md-5'>
+        <div className="container">
+          <div className="row rounded-xl bg-secondary p-4 p-md-5 align-items-center">
+            <div className="col-lg-5">
+              <div className='text-center'>
+                <img src={bussiness.src} alt="bussiness" className='img-fluid' />
+              </div>
+            </div>
+            <div className="col-lg-7">
+              <div className='text-center'>
+                <h3 className='text-white mb-3 mb-md-4'>Are You Architecture Interior Designer?</h3>
+                <h4 className='mx-auto mb-4 mb-md-5 text-white' style={{ maxWidth: '20ch' }}>Create Your Profile Here & Publish your work</h4>
+                <button className='btn btn-light-rounded'>Showcase Your Business</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Architecture House Plan */}
+      <section className='py-4 py-md-5'>
+        <div className="container">
+          <div className="row bg-danger rounded-xl align-items-center">
+            <div className="col-lg-5 ps-0">
+              <img src={housePlan.src} className='w-100' alt="house plan" />
+            </div>
+            <div className="col-lg-4">
+              <div className='text-center'>
+                <h4 className='text-white mb-2 fw-normal'>Architecture House Plan CAD Drawings CAD Blocks &</h4>
+                <h4 className='text-white'><b>21354 Files</b></h4>
+              </div>
+            </div>
+            <div className="col-lg-3">
+              <div className='text-center'>
+                <button className='btn btn-danger'>GET YOUR HOUSE PLAN</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+    </Fragment >
   )
 }
 

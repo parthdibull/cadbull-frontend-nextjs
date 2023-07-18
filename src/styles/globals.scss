@@ -36,6 +36,10 @@
   color: $primary !important;
 }
 
+.bg-danger {
+  background-color: $danger !important;
+}
+
 .bg-primary {
   background: $primary !important;
 }
@@ -49,12 +53,16 @@
   border-radius: $borderRadiusSm !important;
 }
 
+.rounded-xl {
+  border-radius: $borderRadiusXl;
+}
+
 
 // ******** Section Heading ********
 
 .heading-image-wrapper {
   position: relative;
-  margin-right: -15px;
+  // margin-right: -15px;
 
   @media all and (max-width:768px) {
     top: 15px;
@@ -234,7 +242,7 @@
   }
 }
 
-
+// ******** Category ********
 .category-wrapper {
   h6 {
     font: normal normal 600 16px/1 GraphikMedium, sans-serif;
@@ -242,6 +250,36 @@
 
     @media all and (max-width:767px) {
       font: normal normal 600 14px/1 GraphikMedium, sans-serif;
+    }
+  }
+}
+
+
+// ******** OUR SKILLS ********
+
+.progress {
+  overflow: visible !important;
+  height: 2px;
+  background-color: transparent;
+  font-size: var(--bs-progress-font-size);
+  border-radius: var(--bs-progress-border-radius);
+
+  .progress-bar {
+    background-color: $black !important;
+    position: relative;
+    overflow: visible !important;
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 0;
+      bottom: 0;
+      right: 0;
+      margin-block: auto;
+      background-color: $black !important;
+      width: 2px;
+      height: 16px;
+      transform: rotate(20deg);
     }
   }
 }

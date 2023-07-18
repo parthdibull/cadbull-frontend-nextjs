@@ -22,32 +22,63 @@
   }
 }
 
-.btn-primary {
-  background-color: $primary;
-  border-color: $primary ;
-  color: $white;
+
+// Variable Button 
+@mixin variable-button($bgColor, $borderColor, $color) {
+  background-color: $bgColor;
+  border-color: $borderColor ;
+  color: $color;
   border-radius: 0;
   position: relative;
+}
 
+
+@mixin variable-button-hover($hoverBg, $hoverText, $image) {
   &::before {
     position: absolute;
     content: "";
-    right: -12px;
-    bottom: -12px;
-    width: 117px;
-    height: 40px;
-    background-image: url("../assets/images/button-lines.png");
+    right: -14px;
+    bottom: -14px;
+    width: 155px;
+    height: 54px;
+    background-image: $image;
+    transition: all 0.5s ease-in-out
   }
 
   &:hover {
-    background-color: $secondary;
+    background-color: $hoverBg;
+    color: $hoverText;
 
     &::before {
-      background-image: none;
+      opacity: 0;
+      transition: all 0.5s ease-in-out
     }
   }
 }
 
+.btn-primary {
+  @include variable-button($primary, $primary, $white, );
+  @include variable-button-hover($secondary, $white, url("../assets/images/button-lines.dark.png"));
+}
+
+.btn-light {
+  @include variable-button($white, $white, $primary);
+  @include variable-button-hover($primary, $white, url("../assets/images/button-lines.png"));
+}
+
+.btn-light-rounded {
+  @include variable-button($white, $white, $primary);
+  border-radius: 60px;
+  padding: 12px 24px;
+  @include variable-button-hover($primary, $white, '');
+  font-family: GraphikSemibold,
+    sans-serif;
+}
+
+.btn-danger {
+  @include variable-button($white, $white, $primary);
+  @include variable-button-hover($danger, $white, url("../assets/images/button-lines.png"));
+}
 
 .transparent-btn {
   background-color: transparent;
