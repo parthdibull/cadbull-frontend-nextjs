@@ -32,6 +32,7 @@ import category12 from "@/assets/icons/Urbandesign.png";
 import ourSkills from "@/assets/images/our-skills.png";
 import bussiness from "@/assets/images/Interior-Designer.png";
 import housePlan from "@/assets/images/HOUSE-PLAN.png";
+import blog from "@/assets/images/blog-1.png"
 
 
 const drawings = [
@@ -41,6 +42,28 @@ const drawings = [
   { img: BIM4, type: "MAX", description: "3D MODELS" },
   { img: BIM5, type: "3DS", description: "3D STUDIO MAX" }
 ]
+
+const blogs = [
+  {
+    image: blog,
+    title: "Top 10 Tips for Your Kitchen Interior Design",
+    type: "INTERIOR",
+    description: "Cadbull is an exclusive forum that connects the creative community of innovative Auto cad designers, firms and organizations."
+  },
+  {
+    image: blog,
+    title: "The Golden Ratio Rule for Best 3D Sketch",
+    type: "ACHITECTURE",
+    description: "Cadbull is an exclusive forum that connects the creative community of innovative Auto cad designers, firms and organizations."
+  },
+  {
+    image: blog,
+    title: "Use Auto CAD Plan Design Materials",
+    type: "CAD DESIGN",
+    description: "Cadbull is an exclusive forum that connects the creative community of innovative Auto cad designers, firms and organizations."
+  }
+]
+
 const projects = [
   {
     id: 1,
@@ -481,6 +504,55 @@ export default function Home() {
         </div>
       </section>
 
+
+      {/* Project of the Day  */}
+      <section className='py-md-5 py-3'>
+        <div className="container">
+          <div className="row mb-4 mb-md-5">
+            <div className="col-md-12">
+              <div className='d-flex justify-content-between align-items-md-center flex-column flex-md-row gap-5'>
+                <div>
+                  <SectionHeading subHeading={"FIND OUR ARTICLES"} mainHeading={"Latest Articles"} mainHeadingBold={"Blogs"} alignment="" />
+                </div>
+                <div className='w-100 text-end'>
+                  <Link href="" className="btn btn-primary">VIEW ALL ARTICLES</Link>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="row g-4">
+            {
+              blogs.map((blog) => {
+                return (
+                  <div className="col-lg-4 col-sm-6" key={blog.id}>
+                    <div className='project-day-card h-100'>
+                      <div className='project-day-card-image mb-3 position-relative'>
+                        <img src={blog.image.src} alt="" className='w-100 img-fluid' />
+                      </div>
+
+                      <div className='project-day-card-title d-flex justify-content-between'>
+                        <h5 style={{ width: "20ch" }}>{blog.title}</h5>
+                        <div>
+                          <span className='badge bg-secondary text-white'>{blog.type}</span>
+                        </div>
+                      </div>
+                      <div className='project-day-card-description my-3'>
+                        <p className='ps-3'>{blog.description}</p>
+                      </div>
+                      <div className='project-day-card-link'>
+                        <p className='pe-2'>MORE DETAILS</p>
+                      </div>
+                    </div>
+                  </div>
+
+                )
+              })
+            }
+          </div>
+
+        </div>
+      </section>
 
 
     </Fragment >
